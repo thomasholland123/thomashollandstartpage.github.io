@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+:root {
+	--background: #0F8AA6;
+	--hover-bg: #0E7995;
+	--base-txt: #6BE8AE;
+  --sub-txt: #F5D45B;
+}
+::-webkit-input-placeholder {
+    opacity: 1 !important;
+}
+::-moz-placeholder {
+    opacity: 1 !important;
+}
+a, a:hover, a:focus, a:active, a:visited {
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+}
+
+body, html {
+  background-color: var(--background) !important;
+	background-position: unset;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+  padding: 0px;
+	margin: 0;
+	font-family: Raleway;
+}
+
+header,
+footer {
+	width: 100%;
+	height: 100px;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+header {
+	top: 0;
+	padding: 24px 0;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	padding: 0 72px 48px 72px;
+}
+
+#time {
+	background-color: var(--background);
+	color: var(--base-txt);
+	text-align: center;
+	font-size: 96px;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+#grid {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-flow: row wrap;
+	box-sizing: border-box;
+	margin-top: 120px;
+}
+
+.tile {
+	width: 600px; /* default for mobile screens */
+	height: 175px;
+	margin: 2px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.tile {
+		width: 600px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.tile {
+		width: 480px;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.tile {
+		width: 400px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.tile {
+		width: 475px;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.tile {
+		width: 400px;
+	}
+}
+
+#grid a {
+	display: block;
+	background-color: var(--background);
+	color: var(--base-txt);
+	box-sizing: border-box;
+	height: 100%;
+	padding: 4vh 4vw;
+	text-align: center;
+	transition: .2s all;
+}
+
+#grid a:focus,
+#grid a:hover {
+	background-color: var(--hover-bg);
+}
+
+#grid a.disabled,
+#grid a.disabled:focus,
+#grid a.disabled:hover {
+	background-color: var(--background);
+	pointer-events: none;
+	cursor: default;
+}
+
+#grid i {
+	float: left;
+	margin-top: 12px;
+	margin-right: 24px;
+	vertical-align: middle;
+	transition: color 500ms, transform 100ms ease-in;
+}
+
+#grid a:focus i,
+#grid a:hover i {
+	transform: scale(1.5);
+}
+
+#grid h3 {
+	transition: color 500ms;
+}
+
+#grid p {
+  color: var(--sub-txt);
+	transition: color 500ms;
+}
+
+input[type="text"] {
+	background-color: transparent;
+	color: var(--sub-txt);
+	outline: none;
+	border: none;
+	border-bottom: 4px solid var(--sub-txt);
+	font-size: 52px;
+	box-sizing: border-box;
+	padding: 8px 16px;
+	z-index: 1;
+	width: 100%;
+	transition: color 400ms, border-bottom 1s;
+}
+
+input[type="text"]:focus {
+	border-bottom: 4px solid var(--base-txt);
+	color: var(--base-txt);
+	outline: none;
+}
+
+input::-webkit-input-placeholder{
+  color:var(--hover-bg);
+}
